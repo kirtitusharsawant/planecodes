@@ -119,45 +119,49 @@ class CommonUI {
         ));
   }
 
-  static Widget commonAppBarAction({String? text, bool isVisible = false}) {
-    return Padding(
-      padding: const EdgeInsets.only(
-        top: 10,
-        right: 20,
-        left: 20,
-      ),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Text(
-            text!,
-            style: GoogleFonts.istokWeb(
-              fontSize: 18.sp,
-              fontWeight: FontWeight.w500,
-              color: darkwhiteColor,
+  static Widget commonAppBarAction(
+      {String? text, bool isVisible = false, VoidCallback? onTap}) {
+    return InkWell(
+      onTap: onTap,
+      child: Padding(
+        padding: const EdgeInsets.only(
+          top: 10,
+          right: 20,
+          left: 20,
+        ),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+              text!,
+              style: GoogleFonts.istokWeb(
+                fontSize: 18.sp,
+                fontWeight: FontWeight.w500,
+                color: darkwhiteColor,
+              ),
             ),
-          ),
-          const SizedBox(
-            height: 5,
-          ),
-          isVisible
-              ? Container(
-                  height: 3,
-                  width: 50,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(2),
-                    color: whiteColor,
+            const SizedBox(
+              height: 5,
+            ),
+            isVisible
+                ? Container(
+                    height: 3,
+                    width: 50,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(2),
+                      color: whiteColor,
+                    ),
+                  )
+                : Container(
+                    height: 3,
+                    width: 50,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(2),
+                      color: Colors.transparent,
+                    ),
                   ),
-                )
-              : Container(
-                  height: 3,
-                  width: 50,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(2),
-                    color: Colors.transparent,
-                  ),
-                ),
-        ],
+          ],
+        ),
       ),
     );
   }

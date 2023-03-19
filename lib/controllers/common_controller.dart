@@ -12,4 +12,10 @@ class CommonController extends GetxController {
   setOnHoverToFalse() {
     onHover.value = false;
   }
+
+  var selectedActionItem = 0.obs;
+
+  setselectedActionItemIndex(int index) {
+    selectedActionItem.value = index;
+  }
 }

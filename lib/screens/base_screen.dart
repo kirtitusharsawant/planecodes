@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:planecode/constants/colour_constants.dart';
+import 'package:planecode/constants/controller_constants.dart';
 import 'package:planecode/constants/text_constants.dart';
 import 'package:planecode/helpers/common_ui.dart';
 import 'package:planecode/screens/page_four/page_four_screen.dart';
@@ -16,6 +17,7 @@ class BaseScreen extends StatefulWidget {
 }
 
 class _BaseScreenState extends State<BaseScreen> {
+  int index = 0;
   @override
   Widget build(BuildContext context) {
     // print(MediaQuery.of(context).size.width);
@@ -25,10 +27,42 @@ class _BaseScreenState extends State<BaseScreen> {
         title: CommonUI.commonappBarTitle(text: appBarTitle),
         elevation: 0,
         actions: [
-          CommonUI.commonAppBarAction(text: appBarActions, isVisible: true),
-          CommonUI.commonAppBarAction(text: appBarActionsaboutus),
-          CommonUI.commonAppBarAction(text: appBarActionsServices),
-          CommonUI.commonAppBarAction(text: appBarActionscontactus),
+          CommonUI.commonAppBarAction(
+            text: appBarActions,
+            isVisible: index == 0,
+            onTap: () {
+              setState(() {
+                index = 0;
+              });
+            },
+          ),
+          CommonUI.commonAppBarAction(
+            text: appBarActionsaboutus,
+            isVisible: index == 1,
+            onTap: () {
+              setState(() {
+                index = 1;
+              });
+            },
+          ),
+          CommonUI.commonAppBarAction(
+            text: appBarActionsServices,
+            isVisible: index == 2,
+            onTap: () {
+              setState(() {
+                index = 2;
+              });
+            },
+          ),
+          CommonUI.commonAppBarAction(
+            text: appBarActionscontactus,
+            isVisible: index == 3,
+            onTap: () {
+              setState(() {
+                index = 3;
+              });
+            },
+          ),
           const SizedBox(
             width: 20,
           ),
