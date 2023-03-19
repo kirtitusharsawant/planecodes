@@ -1,13 +1,13 @@
+import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:planecode/constants/colour_constants.dart';
-import 'package:planecode/constants/image_constants.dart';
+import 'package:planecode/constants/controller_constants.dart';
 
 class CommonUI {
   CommonUI._();
-
-  // static Widget commonThings(){}
 
   static Widget commonappBarTitle({String? text}) {
     return Padding(
@@ -16,9 +16,28 @@ class CommonUI {
         text!,
         style: GoogleFonts.istokWeb(
           fontWeight: FontWeight.w700,
-          fontSize: 48.sp,
+          fontSize: 40.sp,
           color: darkwhiteColor,
         ),
+      ),
+    );
+  }
+
+  static Widget commonAnimatedText(
+      {List<AnimatedText>? stringList, Color? color}) {
+    return DefaultTextStyle(
+      style: GoogleFonts.istokWeb(
+        fontSize: 38.sp,
+        fontWeight: FontWeight.w400,
+        color: color,
+      ),
+      child: AnimatedTextKit(
+        repeatForever: true,
+        pause: const Duration(seconds: 2),
+        animatedTexts: stringList!,
+        onTap: () {
+          print("Tap Event");
+        },
       ),
     );
   }
@@ -27,7 +46,7 @@ class CommonUI {
     return Text(
       titletext!,
       style: GoogleFonts.istokWeb(
-        fontSize: 48.sp,
+        fontSize: 35.sp,
         fontWeight: FontWeight.w400,
         color: color,
       ),
@@ -35,40 +54,49 @@ class CommonUI {
   }
 
   static Widget commonDescription({String? descriptiontext, Color? color}) {
-    return Text(descriptiontext!,
-        style: GoogleFonts.istokWeb(
-          fontSize: 24.sp,
-          fontWeight: FontWeight.w400,
-          color: color,
-        ));
+    return Text(
+      descriptiontext!,
+      style: GoogleFonts.istokWeb(
+        fontSize: 18.sp,
+        color: color,
+      ),
+    );
   }
 
   static Widget commonElevatedButton({
     required String buttontext,
     VoidCallback? ontap,
   }) {
-    return SizedBox(
-      height: 60,
-      width: 200,
-      child: ElevatedButton(
-        style: ElevatedButton.styleFrom(
-          primary: blueColor,
-          shape: RoundedRectangleBorder(
-            side: const BorderSide(color: whiteColor, width: 3),
-            borderRadius: BorderRadius.circular(10),
+    return Obx(() {
+      return SizedBox(
+        height: 50.sp,
+        width: 180.sp,
+        child: ElevatedButton(
+          onHover: (value) {
+            value
+                ? commonController.setOnHoverToTrue()
+                : commonController.setOnHoverToFalse();
+          },
+          style: ElevatedButton.styleFrom(
+            primary:
+                commonController.onHover.value ? darkwhiteColor : blueColor,
+            shape: RoundedRectangleBorder(
+              side: const BorderSide(color: whiteColor, width: 3),
+              borderRadius: BorderRadius.circular(10),
+            ),
+          ),
+          onPressed: () {},
+          child: Text(
+            buttontext,
+            style: GoogleFonts.istokWeb(
+              fontWeight: FontWeight.w700,
+              fontSize: 20.sp,
+              color: commonController.onHover.value ? blueColor : whiteColor,
+            ),
           ),
         ),
-        onPressed: () {},
-        child: Text(
-          buttontext,
-          style: GoogleFonts.istokWeb(
-            fontWeight: FontWeight.w700,
-            fontSize: 20.sp,
-            color: whiteColor,
-          ),
-        ),
-      ),
-    );
+      );
+    });
   }
 
   static Widget commonContainerTitle({String? containerTitle}) {
@@ -94,7 +122,7 @@ class CommonUI {
   static Widget commonAppBarAction({String? text, bool isVisible = false}) {
     return Padding(
       padding: const EdgeInsets.only(
-        top: 15,
+        top: 10,
         right: 20,
         left: 20,
       ),
@@ -105,7 +133,7 @@ class CommonUI {
             text!,
             style: GoogleFonts.istokWeb(
               fontSize: 18.sp,
-              fontWeight: FontWeight.w700,
+              fontWeight: FontWeight.w500,
               color: darkwhiteColor,
             ),
           ),

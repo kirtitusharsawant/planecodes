@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:planecode/helpers/initial_binding.dart';
 import 'package:planecode/screens/base_screen.dart';
 
 void main() async {
@@ -21,11 +22,12 @@ class MyApp extends StatelessWidget {
         minTextAdapt: true,
         splitScreenMode: true,
         builder: (context, child) {
-          return const GetMaterialApp(
+          return GetMaterialApp(
             debugShowCheckedModeBanner: false,
-            locale: Locale('en', 'US'),
+            locale: const Locale('en', 'US'),
             title: 'Plan Code',
-            home: BaseScreen(),
+            home: const BaseScreen(),
+            initialBinding: InitialBinding(),
           );
         });
   }

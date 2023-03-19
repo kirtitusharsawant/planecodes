@@ -18,28 +18,29 @@ class BaseScreen extends StatefulWidget {
 class _BaseScreenState extends State<BaseScreen> {
   @override
   Widget build(BuildContext context) {
+    // print(MediaQuery.of(context).size.width);
     return Scaffold(
-      appBar: PreferredSize(
-        preferredSize: Size.fromHeight(70.sp),
-        child: AppBar(
-          backgroundColor: blueColor,
-          title: CommonUI.commonappBarTitle(text: appBarTitle),
-          elevation: 0,
-          actions: [
-            CommonUI.commonAppBarAction(text: appBarActions, isVisible: true),
-            CommonUI.commonAppBarAction(text: appBarActionsaboutus),
-            CommonUI.commonAppBarAction(text: appBarActionsServices),
-            CommonUI.commonAppBarAction(text: appBarActionscontactus),
-          ],
-        ),
+      appBar: AppBar(
+        backgroundColor: blueColor,
+        title: CommonUI.commonappBarTitle(text: appBarTitle),
+        elevation: 0,
+        actions: [
+          CommonUI.commonAppBarAction(text: appBarActions, isVisible: true),
+          CommonUI.commonAppBarAction(text: appBarActionsaboutus),
+          CommonUI.commonAppBarAction(text: appBarActionsServices),
+          CommonUI.commonAppBarAction(text: appBarActionscontactus),
+          const SizedBox(
+            width: 20,
+          ),
+        ],
       ),
       body: SingleChildScrollView(
         child: Column(
           children: const [
             PageOneScreen(),
-            PageTwoScreen(),
-            PageThreeScreen(),
-            PageFourScreen(),
+            // PageTwoScreen(),
+            // PageThreeScreen(),
+            // PageFourScreen(),
           ],
         ),
       ),

@@ -1,3 +1,4 @@
+import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:planecode/constants/colour_constants.dart';
@@ -13,51 +14,18 @@ class PageOneDesktop extends StatelessWidget {
     return Container(
       color: blueColor,
       height: MediaQuery.of(context).size.height,
+      width: double.infinity,
       child: Stack(
         children: [
           Positioned(
-            top: 0,
             bottom: 0,
-            right: 0,
-            left: 0,
+            top: 0,
+            right: 60.sp,
             child: SizedBox(
-              width: double.infinity,
-              child: Container(
-                margin: EdgeInsets.symmetric(horizontal: 30.sp),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    SizedBox(
-                      height: 440,
-                      width: 850,
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          CommonUI.commonTitle(
-                              titletext: pageOneTitle, color: darkwhiteColor),
-                          CommonUI.commonTitle(
-                              titletext: pageOneTitleTwo,
-                              color: darkwhiteColor),
-                          CommonUI.commonDescription(
-                              descriptiontext: pageOnedescription,
-                              color: darkwhiteColor),
-                          const SizedBox(
-                            height: 20,
-                          ),
-                          CommonUI.commonElevatedButton(
-                              buttontext: pageOneButton),
-                        ],
-                      ),
-                    ),
-                    const Spacer(),
-                    SizedBox(
-                      height: 350,
-                      width: 400,
-                      child: Image.asset(pageOneImage),
-                    )
-                  ],
-                ),
+              height: 300.sp,
+              width: 350.sp,
+              child: Center(
+                child: Image.asset(pageOneImage),
               ),
             ),
           ),
@@ -68,9 +36,64 @@ class PageOneDesktop extends StatelessWidget {
             child: SizedBox(
               height: 300,
               width: double.infinity,
-              child: Image.asset(pageOneDots),
+              child: Image.asset(
+                pageOneDots,
+                fit: BoxFit.cover,
+              ),
             ),
-          )
+          ),
+          Positioned(
+            top: 0,
+            bottom: 0,
+            right: 0,
+            left: 0,
+            child: SizedBox(
+              width: double.infinity,
+              child: Container(
+                margin: EdgeInsets.only(left: 50.sp),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    SizedBox(
+                      // height: 440.sp,
+                      // width: 850.sp,
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          CommonUI.commonTitle(
+                              titletext: pageOneTitle, color: darkwhiteColor),
+                          CommonUI.commonAnimatedText(
+                            stringList: [
+                              TypewriterAnimatedText("Design Thinking"),
+                              TypewriterAnimatedText("Clean Coding"),
+                            ],
+                            color: darkwhiteColor,
+                          ),
+                          SizedBox(
+                            height: 10.sp,
+                          ),
+                          SizedBox(
+                            width: 650.sp,
+                            child: CommonUI.commonDescription(
+                                descriptiontext: pageOnedescription,
+                                color: darkwhiteColor),
+                          ),
+                          SizedBox(
+                            height: 20.sp,
+                          ),
+                          CommonUI.commonElevatedButton(
+                              buttontext: pageOneButton),
+                        ],
+                      ),
+                    ),
+                    const Spacer(),
+                  ],
+                ),
+              ),
+            ),
+          ),
         ],
       ),
     );
