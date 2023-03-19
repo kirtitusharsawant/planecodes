@@ -1,0 +1,11 @@
+const String dataEnginaaring = "assets/images/data_engineering.png";
+const String dataScience = "assets/images/data_science.png";
+const String devopsServices = "assets/images/devops_services.png";
+const String mobiledevelopment = "assets/images/mobile_development.png";
+const String pageOneDots = "assets/images/page_one_dots.png";
+const String pageOneImage = "assets/images/page_one_image.png";
+const String pageThreeDots = "assets/images/page_three_dots.png";
+const String pageTwoDots = "assets/images/page_two_dots.png";
+const String testingServices = "assets/images/testing_services.png";
+const String uxDesign = "assets/images/ux_design.png";
+const String webdevelopment = "assets/images/web_development.png";
