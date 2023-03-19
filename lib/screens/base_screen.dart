@@ -1,7 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:planecode/constants/image_constants.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:planecode/constants/colour_constants.dart';
 import 'package:planecode/constants/text_constants.dart';
 import 'package:planecode/helpers/common_ui.dart';
+import 'package:planecode/screens/page_four/page_four_screen.dart';
+import 'package:planecode/screens/page_one/page_one_screen.dart';
+import 'package:planecode/screens/page_three/page_three_screen.dart';
+import 'package:planecode/screens/page_two/page_two_screen.dart';
 
 class BaseScreen extends StatefulWidget {
   const BaseScreen({super.key});
@@ -14,42 +19,27 @@ class _BaseScreenState extends State<BaseScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(appBarTitle),
+      appBar: PreferredSize(
+        preferredSize: Size.fromHeight(70.sp),
+        child: AppBar(
+          backgroundColor: blueColor,
+          title: CommonUI.commonappBarTitle(text: appBarTitle),
+          elevation: 0,
+          actions: [
+            CommonUI.commonAppBarAction(text: appBarActions, isVisible: true),
+            CommonUI.commonAppBarAction(text: appBarActionsaboutus),
+            CommonUI.commonAppBarAction(text: appBarActionsServices),
+            CommonUI.commonAppBarAction(text: appBarActionscontactus),
+          ],
+        ),
       ),
       body: SingleChildScrollView(
         child: Column(
-          children: [
-            // PageOneScreen(),
-            // PageTwoScreen(),
-            // PageThreeScreen(),
-            // PageFourScreen(),
-            // PageFiveScreen(),
-
-            CommonUI.commonDescription(descriptiontext: pageTwoDescription),
-            SizedBox(
-              height: 20,
-            ),
-            CommonUI.commonRoundedCircle(),
-            SizedBox(
-              height: 20,
-            ),
-            CommonUI.commonRectangle(),
-            SizedBox(
-              height: 20,
-            ),
-            CommonUI.commonRectangleOne(
-                imagePath: webdevelopment,
-                containertitle: pageTwoContainerOneTitle,
-                containerdescription: pageTwoContainerOnedescription),
-            const SizedBox(
-              height: 20,
-            ),
-
-            CommonUI.commonElevatedButton(buttontext: "COntact us"),
-            const SizedBox(
-              height: 20,
-            ),
+          children: const [
+            PageOneScreen(),
+            PageTwoScreen(),
+            PageThreeScreen(),
+            PageFourScreen(),
           ],
         ),
       ),

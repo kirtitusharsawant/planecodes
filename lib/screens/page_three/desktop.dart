@@ -9,9 +9,9 @@ class PageThreeDesktop extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: blueColor,
-      body: Stack(
+    return SizedBox(
+      height: MediaQuery.of(context).size.height,
+      child: Stack(
         children: [
           Positioned(
             bottom: 0,
@@ -24,7 +24,7 @@ class PageThreeDesktop extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                CommonUI.commonTiltle(
+                CommonUI.commonTitle(
                     titletext: pageThreeTitle, color: whiteColor),
                 Padding(
                   padding: const EdgeInsets.only(left: 50),

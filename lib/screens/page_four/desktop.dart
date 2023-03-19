@@ -8,12 +8,12 @@ class PageFourDesktop extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: whiteColor,
-      body: Column(
+    return SizedBox(
+      height: MediaQuery.of(context).size.height,
+      child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          CommonUI.commonTiltle(titletext: pageFourTitle, color: blackColor),
+          CommonUI.commonTitle(titletext: pageFourTitle, color: blackColor),
           Padding(
             padding: const EdgeInsets.only(left: 50),
             child: CommonUI.commonDescription(

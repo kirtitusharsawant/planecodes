@@ -23,15 +23,14 @@ class CommonUI {
     );
   }
 
-  static Widget commonTiltle({String? titletext, Color? color}) {
-    return Padding(
-      padding: EdgeInsets.only(left: 40.sp),
-      child: Text(titletext!,
-          style: GoogleFonts.istokWeb(
-            fontSize: 48.sp,
-            fontWeight: FontWeight.w400,
-            color: color,
-          )),
+  static Widget commonTitle({String? titletext, Color? color}) {
+    return Text(
+      titletext!,
+      style: GoogleFonts.istokWeb(
+        fontSize: 48.sp,
+        fontWeight: FontWeight.w400,
+        color: color,
+      ),
     );
   }
 
@@ -92,27 +91,44 @@ class CommonUI {
         ));
   }
 
-  static Widget commonAppBarAction({String? text}) {
+  static Widget commonAppBarAction({String? text, bool isVisible = false}) {
     return Padding(
-      padding: const EdgeInsets.all(12.0),
+      padding: const EdgeInsets.only(
+        top: 15,
+        right: 20,
+        left: 20,
+      ),
       child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Text(
             text!,
             style: GoogleFonts.istokWeb(
-              fontSize: 20.sp,
+              fontSize: 18.sp,
               fontWeight: FontWeight.w700,
               color: darkwhiteColor,
             ),
           ),
-          SizedBox(
-            height: 7,
+          const SizedBox(
+            height: 5,
           ),
-          Container(
-            height: 4,
-            width: 100,
-            color: whiteColor,
-          ),
+          isVisible
+              ? Container(
+                  height: 3,
+                  width: 50,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(2),
+                    color: whiteColor,
+                  ),
+                )
+              : Container(
+                  height: 3,
+                  width: 50,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(2),
+                    color: Colors.transparent,
+                  ),
+                ),
         ],
       ),
     );
@@ -133,7 +149,8 @@ class CommonUI {
     return Container(
       height: 100.sp,
       width: 100.sp,
-      decoration: const BoxDecoration(color: darkgreyColor, shape: BoxShape.circle),
+      decoration:
+          const BoxDecoration(color: darkgreyColor, shape: BoxShape.circle),
     );
   }
 
@@ -191,7 +208,6 @@ class CommonUI {
                 fontSize: 48.sp,
                 fontWeight: FontWeight.w700,
                 color: darkwhiteColor),
-                
           ),
         ));
   }

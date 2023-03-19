@@ -9,8 +9,8 @@ class PageTwoDesktop extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        body: SingleChildScrollView(
+    return SizedBox(
+      height: MediaQuery.of(context).size.height,
       child: Stack(
         children: [
           Positioned(
@@ -23,7 +23,7 @@ class PageTwoDesktop extends StatelessWidget {
                 SizedBox(
                   height: 45.sp,
                 ),
-                CommonUI.commonTiltle(titletext: pageTwoTitle),
+                CommonUI.commonTitle(titletext: pageTwoTitle),
                 Padding(
                   padding: EdgeInsets.only(left: 40.sp),
                   child: CommonUI.commonDescription(
@@ -91,6 +91,6 @@ class PageTwoDesktop extends StatelessWidget {
           ),
         ],
       ),
-    ));
+    );
   }
 }
