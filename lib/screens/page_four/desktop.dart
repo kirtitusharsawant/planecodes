@@ -48,6 +48,9 @@ class PageFourDesktop extends StatelessWidget {
           Spacer(),
           CommonUI.commonBottomBar(
               text: pageFourBottomBarTitle, color: darkwhiteColor),
+          Row(
+            children: [],
+          )
         ],
       ),
     );

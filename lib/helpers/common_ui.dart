@@ -118,8 +118,7 @@ class CommonUI {
     );
   }
 
-  static Widget commonBottomBarDescription(BuildContext context,
-      {String? descriptiontext}) {
+  static Widget commonBottomBarDescription({String? descriptiontext}) {
     return Text(
       descriptiontext!,
       style: GoogleFonts.istokWeb(
@@ -134,7 +133,7 @@ class CommonUI {
     return Container(
       height: 100.sp,
       width: 100.sp,
-      decoration: BoxDecoration(color: darkgreyColor, shape: BoxShape.circle),
+      decoration: const BoxDecoration(color: darkgreyColor, shape: BoxShape.circle),
     );
   }
 
@@ -181,12 +180,19 @@ class CommonUI {
 
   static Widget commonBottomBar({String? text, Color? color}) {
     return Container(
-      height: 130.sp,
-      width: double.infinity,
-      color: pinkColor,
-      child: Row(
-        children: [],
-      ),
-    );
+        height: 130.sp,
+        width: double.infinity,
+        color: pinkColor,
+        child: Padding(
+          padding: const EdgeInsets.all(30),
+          child: Text(
+            text!,
+            style: GoogleFonts.istokWeb(
+                fontSize: 48.sp,
+                fontWeight: FontWeight.w700,
+                color: darkwhiteColor),
+                
+          ),
+        ));
   }
 }
