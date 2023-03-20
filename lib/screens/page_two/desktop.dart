@@ -10,22 +10,29 @@ class PageTwoDesktop extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: MediaQuery.of(context).size.height,
+      height: MediaQuery.of(context).size.height * 1.1,
       child: Stack(
         children: [
           Positioned(
+            left: 0,
+            right: 0,
+            top: 0,
             child: Image.asset(pageTwoDots),
           ),
           Positioned(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 SizedBox(
                   height: 45.sp,
                 ),
-                CommonUI.commonTitle(titletext: pageTwoTitle),
                 Padding(
-                  padding: EdgeInsets.only(left: 40.sp),
+                  padding: const EdgeInsets.only(left: 50),
+                  child: CommonUI.commonTitle(titletext: pageTwoTitle),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(left: 50),
                   child: CommonUI.commonDescription(
                       descriptiontext: pageTwoDescription),
                 ),

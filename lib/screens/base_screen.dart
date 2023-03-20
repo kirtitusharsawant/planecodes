@@ -72,9 +72,9 @@ class _BaseScreenState extends State<BaseScreen> {
         child: Column(
           children: const [
             PageOneScreen(),
-            // PageTwoScreen(),
-            // PageThreeScreen(),
-            // PageFourScreen(),
+            PageTwoScreen(),
+            PageThreeScreen(),
+            PageFourScreen(),
           ],
         ),
       ),

@@ -166,13 +166,14 @@ class CommonUI {
     );
   }
 
-  static Widget commonBottomBarDescription({String? descriptiontext}) {
+  static Widget commonBottomBarDescription(
+      {String? descriptiontext, Color? color}) {
     return Text(
       descriptiontext!,
       style: GoogleFonts.istokWeb(
         fontWeight: FontWeight.w700,
         fontSize: 32.sp,
-        color: darkwhiteColor,
+        color: color,
       ),
     );
   }
@@ -213,7 +214,11 @@ class CommonUI {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Image.asset(imagePath!),
+            SizedBox(
+              height: 20.sp,
+              width: 20.sp,
+              child: Image.asset(imagePath!),
+            ),
             // Text(containertitle!,
             // style: ,
             // ),
@@ -227,19 +232,33 @@ class CommonUI {
     );
   }
 
-  static Widget commonBottomBar({String? text, Color? color}) {
+  static Widget commonBottomBar(
+      {String? text, Color? color, String? descriptiontext}) {
     return Container(
-        height: 130.sp,
+        height: 80.sp,
         width: double.infinity,
         color: pinkColor,
         child: Padding(
-          padding: const EdgeInsets.all(30),
-          child: Text(
-            text!,
-            style: GoogleFonts.istokWeb(
-                fontSize: 48.sp,
-                fontWeight: FontWeight.w700,
-                color: darkwhiteColor),
+          padding: const EdgeInsets.all(20.0),
+          child: Row(
+            children: [
+              Text(
+                text!,
+                style: GoogleFonts.istokWeb(
+                    fontSize: 40.sp,
+                    fontWeight: FontWeight.w700,
+                    color: darkwhiteColor),
+              ),
+              Spacer(),
+              Text(
+                descriptiontext!,
+                style: GoogleFonts.istokWeb(
+                  fontSize: 25.sp,
+                  fontWeight: FontWeight.w700,
+                  color: darkwhiteColor,
+                ),
+              )
+            ],
           ),
         ));
   }
