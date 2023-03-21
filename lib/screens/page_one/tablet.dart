@@ -12,22 +12,63 @@ class PageOneTablet extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.red,
+      color: blueColor,
       height: MediaQuery.of(context).size.height,
       width: double.infinity,
       child: Stack(
         children: [
-          Positioned(
-            bottom: 0,
-            top: 0,
-            right: 60.sp,
-            child: SizedBox(
-              height: 300.sp,
-              width: 350.sp,
-              child: Center(
-                child: Image.asset(pageOneImage),
+          Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              SizedBox(
+                height: 300.sp,
+                width: 350.sp,
+                child: Center(
+                  child: Image.asset(pageOneImage),
+                ),
               ),
-            ),
+              SizedBox(
+                height: 25.sp,
+              ),
+              SizedBox(
+                width: double.infinity,
+                child: Container(
+                  margin: EdgeInsets.only(left: 50.sp),
+                  child: SizedBox(
+                    // height: 440.sp,
+                    // width: 850.sp,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        CommonUI.commonTitle(
+                            titletext: pageOneTitle, color: darkwhiteColor),
+                        CommonUI.commonAnimatedText(
+                          stringList: [
+                            TypewriterAnimatedText("Design Thinking"),
+                            TypewriterAnimatedText("Clean Coding"),
+                          ],
+                          color: darkwhiteColor,
+                        ),
+                        SizedBox(
+                          height: 10.sp,
+                        ),
+                        SizedBox(
+                          width: 650.sp,
+                          child: CommonUI.commonDescription(
+                              descriptiontext: pageOnedescription,
+                              color: darkwhiteColor),
+                        ),
+                        SizedBox(
+                          height: 20.sp,
+                        ),
+                        CommonUI.commonElevatedButton(
+                            buttontext: pageOneButton),
+                      ],
+                    ),
+                  ),
+                ),
+              ),
+            ],
           ),
           Positioned(
             bottom: 0,
@@ -39,50 +80,6 @@ class PageOneTablet extends StatelessWidget {
               child: Image.asset(
                 pageOneDots,
                 fit: BoxFit.cover,
-              ),
-            ),
-          ),
-          Positioned(
-            top: 0,
-            bottom: 0,
-            right: 0,
-            left: 0,
-            child: SizedBox(
-              width: double.infinity,
-              child: Container(
-                margin: EdgeInsets.only(left: 50.sp),
-                child: SizedBox(
-                  // height: 440.sp,
-                  // width: 850.sp,
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      CommonUI.commonTitle(
-                          titletext: pageOneTitle, color: darkwhiteColor),
-                      CommonUI.commonAnimatedText(
-                        stringList: [
-                          TypewriterAnimatedText("Design Thinking"),
-                          TypewriterAnimatedText("Clean Coding"),
-                        ],
-                        color: darkwhiteColor,
-                      ),
-                      SizedBox(
-                        height: 10.sp,
-                      ),
-                      SizedBox(
-                        width: 650.sp,
-                        child: CommonUI.commonDescription(
-                            descriptiontext: pageOnedescription,
-                            color: darkwhiteColor),
-                      ),
-                      SizedBox(
-                        height: 20.sp,
-                      ),
-                      CommonUI.commonElevatedButton(buttontext: pageOneButton),
-                    ],
-                  ),
-                ),
               ),
             ),
           ),
