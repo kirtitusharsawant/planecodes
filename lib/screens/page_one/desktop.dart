@@ -51,45 +51,37 @@ class PageOneDesktop extends StatelessWidget {
               width: double.infinity,
               child: Container(
                 margin: EdgeInsets.only(left: 50.sp),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    SizedBox(
-                      // height: 440.sp,
-                      // width: 850.sp,
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          CommonUI.commonTitle(
-                              titletext: pageOneTitle, color: darkwhiteColor),
-                          CommonUI.commonAnimatedText(
-                            stringList: [
-                              TypewriterAnimatedText("Design Thinking"),
-                              TypewriterAnimatedText("Clean Coding"),
-                            ],
-                            color: darkwhiteColor,
-                          ),
-                          SizedBox(
-                            height: 10.sp,
-                          ),
-                          SizedBox(
-                            width: 650.sp,
-                            child: CommonUI.commonDescription(
-                                descriptiontext: pageOnedescription,
-                                color: darkwhiteColor),
-                          ),
-                          SizedBox(
-                            height: 20.sp,
-                          ),
-                          CommonUI.commonElevatedButton(
-                              buttontext: pageOneButton),
+                child: SizedBox(
+                  // height: 440.sp,
+                  // width: 850.sp,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      CommonUI.commonTitle(
+                          titletext: pageOneTitle, color: darkwhiteColor),
+                      CommonUI.commonAnimatedText(
+                        stringList: [
+                          TypewriterAnimatedText("Design Thinking"),
+                          TypewriterAnimatedText("Clean Coding"),
                         ],
+                        color: darkwhiteColor,
                       ),
-                    ),
-                    const Spacer(),
-                  ],
+                      SizedBox(
+                        height: 10.sp,
+                      ),
+                      SizedBox(
+                        width: 650.sp,
+                        child: CommonUI.commonDescription(
+                            descriptiontext: pageOnedescription,
+                            color: darkwhiteColor),
+                      ),
+                      SizedBox(
+                        height: 20.sp,
+                      ),
+                      CommonUI.commonElevatedButton(buttontext: pageOneButton),
+                    ],
+                  ),
                 ),
               ),
             ),
