@@ -37,7 +37,7 @@ const String pageTwoContainerEightdescription =
     "Embedded analytics in mobile and web service models, actionable business insights, Agile solutions.";
 const String pageThreeTitle = "OUR WORK";
 const String pageThreeDescription =
-    "We have built over 300 mobile and web applications in the past 7 years.\nWe will let the work speak for itself by giving you a sneak of\nwhat we have done so far.";
+    "We have built over 300 mobile and web applications in the past 7 years. We will let the work speak for itself by giving you a sneak of what we have done so far.";
 const String pageFourTitle = "Technologies";
 const String pageFourDescription =
     "We work with over 20 different technologies,\nincluding few of the latest and most talked about stacks.";

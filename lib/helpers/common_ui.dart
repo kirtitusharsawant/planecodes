@@ -53,7 +53,7 @@ class CommonUI {
     return Responsive(
         mobile: DefaultTextStyle(
           style: GoogleFonts.istokWeb(
-            fontSize: 38.sp,
+            fontSize: 30.sp,
             fontWeight: FontWeight.w400,
             color: color,
           ),
@@ -103,7 +103,8 @@ class CommonUI {
         mobile: Text(
           titletext!,
           style: GoogleFonts.istokWeb(
-            fontSize: 35.sp,
+            fontSize: 30.sp,
+            wordSpacing: 1.3,
             fontWeight: FontWeight.w400,
             color: color,
           ),
@@ -134,12 +135,102 @@ class CommonUI {
     // );
   }
 
+  static Widget commonDescriptionPageTwo(
+      {String? descriptiontext, Color? color}) {
+    return Responsive(
+      mobile: Text(
+        descriptiontext!,
+        textAlign: TextAlign.center,
+        style: GoogleFonts.istokWeb(
+          fontSize: 13.sp,
+          color: color,
+        ),
+      ),
+      tablet: Text(
+        descriptiontext!,
+        textAlign: TextAlign.center,
+        style: GoogleFonts.istokWeb(
+          fontSize: 18.sp,
+          color: color,
+        ),
+      ),
+      desktop: Text(
+        descriptiontext!,
+        style: GoogleFonts.istokWeb(
+          fontSize: 18.sp,
+          color: color,
+        ),
+      ),
+    );
+  }
+
+  static Widget commonDescriptionPageThree(
+      {String? descriptiontext, Color? color}) {
+    return Responsive(
+      mobile: Text(
+        descriptiontext!,
+        textAlign: TextAlign.center,
+        style: GoogleFonts.istokWeb(
+          height: 1.4,
+          fontSize: 13.sp,
+          color: color,
+        ),
+      ),
+      tablet: Text(
+        descriptiontext!,
+        textAlign: TextAlign.center,
+        style: GoogleFonts.istokWeb(
+          fontSize: 18.sp,
+          color: color,
+        ),
+      ),
+      desktop: Text(
+        descriptiontext!,
+        style: GoogleFonts.istokWeb(
+          fontSize: 18.sp,
+          color: color,
+        ),
+      ),
+    );
+  }
+
+  static Widget commonDescriptionPageFour(
+      {String? descriptiontext, Color? color}) {
+    return Responsive(
+      mobile: Text(
+        descriptiontext!,
+        textAlign: TextAlign.center,
+        style: GoogleFonts.istokWeb(
+          height: 1.4,
+          fontSize: 13.sp,
+          color: color,
+        ),
+      ),
+      tablet: Text(
+        descriptiontext!,
+        textAlign: TextAlign.center,
+        style: GoogleFonts.istokWeb(
+          fontSize: 18.sp,
+          color: color,
+        ),
+      ),
+      desktop: Text(
+        descriptiontext!,
+        style: GoogleFonts.istokWeb(
+          fontSize: 18.sp,
+          color: color,
+        ),
+      ),
+    );
+  }
+
   static Widget commonDescription({String? descriptiontext, Color? color}) {
     return Responsive(
       mobile: Text(
         descriptiontext!,
+        textAlign: TextAlign.center,
         style: GoogleFonts.istokWeb(
-          fontSize: 18.sp,
+          fontSize: 16.sp,
           color: color,
         ),
       ),
@@ -168,7 +259,7 @@ class CommonUI {
     return Responsive(mobile: Obx(() {
       return SizedBox(
         height: 50.sp,
-        width: 180.sp,
+        width: 170.sp,
         child: ElevatedButton(
           onHover: (value) {
             value
@@ -568,8 +659,8 @@ class CommonUI {
   static Widget commonRoundedCircle() {
     return Responsive(
       mobile: Container(
-        height: 100.sp,
-        width: 100.sp,
+        height: 5.sp,
+        width: 5.sp,
         decoration:
             const BoxDecoration(color: darkgreyColor, shape: BoxShape.circle),
       ),
@@ -597,8 +688,8 @@ class CommonUI {
   static Widget commonRectangle() {
     return Responsive(
       mobile: Container(
-          height: 250.sp,
-          width: 400.sp,
+          height: 200.sp,
+          width: 250.sp,
           decoration: BoxDecoration(
             color: darkgreyColor,
             borderRadius: BorderRadius.circular(10),
@@ -634,14 +725,14 @@ class CommonUI {
       String? containerdescription}) {
     return Responsive(
         mobile: Container(
-          height: 250,
-          width: 250,
+          height: 180.sp,
+          width: 260.sp,
           decoration: BoxDecoration(
             color: blueColor,
             borderRadius: BorderRadius.circular(10),
           ),
           child: Padding(
-            padding: const EdgeInsets.all(20),
+            padding: const EdgeInsets.all(16),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -755,31 +846,31 @@ class CommonUI {
       {String? text, Color? color, String? descriptiontext}) {
     return Responsive(
         mobile: Container(
-            height: 80.sp,
+            height: 70.sp,
             width: double.infinity,
             color: pinkColor,
-            child: Padding(
-              padding: const EdgeInsets.all(20.0),
-              child: Row(
-                children: [
-                  Text(
-                    text!,
-                    style: GoogleFonts.istokWeb(
-                        fontSize: 40.sp,
-                        fontWeight: FontWeight.w700,
-                        color: darkwhiteColor),
-                  ),
-                  Spacer(),
-                  Text(
-                    descriptiontext!,
-                    style: GoogleFonts.istokWeb(
-                      fontSize: 25.sp,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  text!,
+                  style: GoogleFonts.istokWeb(
+                      fontSize: 22.sp,
                       fontWeight: FontWeight.w700,
-                      color: darkwhiteColor,
-                    ),
-                  )
-                ],
-              ),
+                      color: darkwhiteColor),
+                ),
+                SizedBox(
+                  height: 2.sp,
+                ),
+                Text(
+                  descriptiontext!,
+                  style: GoogleFonts.istokWeb(
+                    fontSize: 14.sp,
+                    fontWeight: FontWeight.w400,
+                    color: darkwhiteColor,
+                  ),
+                )
+              ],
             )),
         tablet: Container(
             height: 100.sp,

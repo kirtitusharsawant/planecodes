@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:planecode/constants/colour_constants.dart';
-import 'package:planecode/constants/controller_constants.dart';
 import 'package:planecode/constants/text_constants.dart';
 import 'package:planecode/helpers/common_ui.dart';
 import 'package:planecode/screens/page_four/page_four_screen.dart';
