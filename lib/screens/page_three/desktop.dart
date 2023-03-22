@@ -20,64 +20,64 @@ class PageThreeDesktop extends StatelessWidget {
               bottom: 0,
               left: 0,
               right: 0,
-              child: Image.asset(pageThreeDots),
+              child: Image.asset(
+                pageThreeDots,
+                fit: BoxFit.cover,
+              ),
             ),
             Positioned(
-                child: SingleChildScrollView(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  SizedBox(
-                    height: 45.sp,
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(left: 50),
-                    child: CommonUI.commonTitle(
-                        titletext: pageThreeTitle, color: whiteColor),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(left: 50),
-                    child: CommonUI.commonDescription(
-                        descriptiontext: pageThreeDescription,
-                        color: whiteColor),
-                  ),
-                  const SizedBox(
-                    height: 25,
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      CommonUI.commonRectangle(),
-                      const SizedBox(
-                        width: 30,
-                      ),
-                      CommonUI.commonRectangle(),
-                      const SizedBox(
-                        width: 30,
-                      ),
-                      CommonUI.commonRectangle(),
-                    ],
-                  ),
-                  const SizedBox(
-                    height: 30,
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      CommonUI.commonRectangle(),
-                      const SizedBox(
-                        width: 30,
-                      ),
-                      CommonUI.commonRectangle(),
-                      const SizedBox(
-                        width: 30,
-                      ),
-                      CommonUI.commonRectangle(),
-                    ],
-                  )
-                ],
-              ),
+                child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                SizedBox(
+                  height: 45.sp,
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(left: 50),
+                  child: CommonUI.commonTitle(
+                      titletext: pageThreeTitle, color: whiteColor),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(left: 50),
+                  child: CommonUI.commonDescription(
+                      descriptiontext: pageThreeDescription, color: whiteColor),
+                ),
+                const SizedBox(
+                  height: 25,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    CommonUI.commonRectangle(),
+                    SizedBox(
+                      width: 20.sp,
+                    ),
+                    CommonUI.commonRectangle(),
+                    SizedBox(
+                      width: 20.sp,
+                    ),
+                    CommonUI.commonRectangle(),
+                  ],
+                ),
+                SizedBox(
+                  height: 20.sp,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    CommonUI.commonRectangle(),
+                    SizedBox(
+                      width: 20.sp,
+                    ),
+                    CommonUI.commonRectangle(),
+                    SizedBox(
+                      width: 20.sp,
+                    ),
+                    CommonUI.commonRectangle(),
+                  ],
+                )
+              ],
             ))
           ],
         ),

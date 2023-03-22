@@ -1,6 +1,7 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:planecode/constants/colour_constants.dart';
 import 'package:planecode/constants/image_constants.dart';
 import 'package:planecode/constants/text_constants.dart';
@@ -70,11 +71,23 @@ class PageOneDesktop extends StatelessWidget {
                       SizedBox(
                         height: 10.sp,
                       ),
+                      // SizedBox(
+                      //   width: 650.sp,
+                      //   child: CommonUI.commonDescription(
+                      //     descriptiontext: pageOnedescription,
+                      //     color: darkwhiteColor,
+                      //   ),
+                      // ),
                       SizedBox(
                         width: 650.sp,
-                        child: CommonUI.commonDescription(
-                            descriptiontext: pageOnedescription,
-                            color: darkwhiteColor),
+                        child: Text(
+                          pageOnedescription,
+                          textAlign: TextAlign.start,
+                          style: GoogleFonts.istokWeb(
+                            fontSize: 18.sp,
+                            color: darkwhiteColor,
+                          ),
+                        ),
                       ),
                       SizedBox(
                         height: 20.sp,

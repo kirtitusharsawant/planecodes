@@ -17,7 +17,10 @@ class PageTwoDesktop extends StatelessWidget {
             left: 0,
             right: 0,
             top: 0,
-            child: Image.asset(pageTwoDots),
+            child: Image.asset(
+              pageTwoDots,
+              fit: BoxFit.cover,
+            ),
           ),
           Positioned(
             child: Column(

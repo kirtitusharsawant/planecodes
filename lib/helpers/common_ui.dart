@@ -26,7 +26,7 @@ class CommonUI {
       tablet: Padding(
         padding: const EdgeInsets.only(top: 20, left: 20),
         child: Text(
-          text!,
+          text,
           style: GoogleFonts.istokWeb(
             fontWeight: FontWeight.w700,
             fontSize: 40.sp,
@@ -37,7 +37,7 @@ class CommonUI {
       desktop: Padding(
         padding: const EdgeInsets.only(top: 20, left: 20),
         child: Text(
-          text!,
+          text,
           style: GoogleFonts.istokWeb(
             fontWeight: FontWeight.w700,
             fontSize: 40.sp,
@@ -75,7 +75,7 @@ class CommonUI {
           child: AnimatedTextKit(
             repeatForever: true,
             pause: const Duration(seconds: 2),
-            animatedTexts: stringList!,
+            animatedTexts: stringList,
             onTap: () {
               print("Tap Event");
             },
@@ -90,7 +90,7 @@ class CommonUI {
           child: AnimatedTextKit(
             repeatForever: true,
             pause: const Duration(seconds: 2),
-            animatedTexts: stringList!,
+            animatedTexts: stringList,
             onTap: () {
               print("Tap Event");
             },
@@ -110,7 +110,7 @@ class CommonUI {
           ),
         ),
         tablet: Text(
-          titletext!,
+          titletext,
           style: GoogleFonts.istokWeb(
             fontSize: 35.sp,
             fontWeight: FontWeight.w400,
@@ -118,7 +118,7 @@ class CommonUI {
           ),
         ),
         desktop: Text(
-          titletext!,
+          titletext,
           style: GoogleFonts.istokWeb(
             fontSize: 35.sp,
             fontWeight: FontWeight.w400,
@@ -147,7 +147,7 @@ class CommonUI {
         ),
       ),
       tablet: Text(
-        descriptiontext!,
+        descriptiontext,
         textAlign: TextAlign.center,
         style: GoogleFonts.istokWeb(
           fontSize: 18.sp,
@@ -155,7 +155,7 @@ class CommonUI {
         ),
       ),
       desktop: Text(
-        descriptiontext!,
+        descriptiontext,
         style: GoogleFonts.istokWeb(
           fontSize: 18.sp,
           color: color,
@@ -177,7 +177,7 @@ class CommonUI {
         ),
       ),
       tablet: Text(
-        descriptiontext!,
+        descriptiontext,
         textAlign: TextAlign.center,
         style: GoogleFonts.istokWeb(
           fontSize: 18.sp,
@@ -185,7 +185,7 @@ class CommonUI {
         ),
       ),
       desktop: Text(
-        descriptiontext!,
+        descriptiontext,
         style: GoogleFonts.istokWeb(
           fontSize: 18.sp,
           color: color,
@@ -207,7 +207,7 @@ class CommonUI {
         ),
       ),
       tablet: Text(
-        descriptiontext!,
+        descriptiontext,
         textAlign: TextAlign.center,
         style: GoogleFonts.istokWeb(
           fontSize: 18.sp,
@@ -215,7 +215,7 @@ class CommonUI {
         ),
       ),
       desktop: Text(
-        descriptiontext!,
+        descriptiontext,
         style: GoogleFonts.istokWeb(
           fontSize: 18.sp,
           color: color,
@@ -244,6 +244,7 @@ class CommonUI {
       ),
       desktop: Text(
         descriptiontext!,
+        textAlign: TextAlign.start,
         style: GoogleFonts.istokWeb(
           fontSize: 18.sp,
           color: color,
@@ -387,7 +388,7 @@ class CommonUI {
           ),
         ),
         tablet: Text(
-          containerTitle!,
+          containerTitle,
           style: GoogleFonts.istokWeb(
             fontWeight: FontWeight.w700,
             fontSize: 20.sp,
@@ -395,7 +396,7 @@ class CommonUI {
           ),
         ),
         desktop: Text(
-          containerTitle!,
+          containerTitle,
           style: GoogleFonts.istokWeb(
             fontWeight: FontWeight.w700,
             fontSize: 20.sp,
@@ -420,13 +421,13 @@ class CommonUI {
               fontSize: 15.sp,
               color: whiteColor,
             )),
-        tablet: Text(containerdescription!,
+        tablet: Text(containerdescription,
             style: GoogleFonts.istokWeb(
               fontWeight: FontWeight.w400,
               fontSize: 15.sp,
               color: whiteColor,
             )),
-        desktop: Text(containerdescription!,
+        desktop: Text(containerdescription,
             style: GoogleFonts.istokWeb(
               fontWeight: FontWeight.w400,
               fontSize: 15.sp,
@@ -498,7 +499,7 @@ class CommonUI {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
-                text!,
+                text,
                 style: GoogleFonts.istokWeb(
                   fontSize: 18.sp,
                   fontWeight: FontWeight.w500,
@@ -541,7 +542,7 @@ class CommonUI {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
-                text!,
+                text,
                 style: GoogleFonts.istokWeb(
                   fontSize: 18.sp,
                   fontWeight: FontWeight.w500,
@@ -630,7 +631,7 @@ class CommonUI {
         ),
       ),
       tablet: Text(
-        descriptiontext!,
+        descriptiontext,
         style: GoogleFonts.istokWeb(
           fontWeight: FontWeight.w700,
           fontSize: 32.sp,
@@ -638,7 +639,7 @@ class CommonUI {
         ),
       ),
       desktop: Text(
-        descriptiontext!,
+        descriptiontext,
         style: GoogleFonts.istokWeb(
           fontWeight: FontWeight.w700,
           fontSize: 32.sp,
@@ -704,7 +705,7 @@ class CommonUI {
       ),
       desktop: Container(
           height: 250.sp,
-          width: 400.sp,
+          width: 350.sp,
           decoration: BoxDecoration(
             color: darkgreyColor,
             borderRadius: BorderRadius.circular(10),
@@ -754,8 +755,8 @@ class CommonUI {
           ),
         ),
         tablet: Container(
-          height: 250,
-          width: 250,
+          height: 250.sp,
+          width: 250.sp,
           decoration: BoxDecoration(
             color: blueColor,
             borderRadius: BorderRadius.circular(10),
@@ -769,7 +770,7 @@ class CommonUI {
                 SizedBox(
                   height: 20.sp,
                   width: 20.sp,
-                  child: Image.asset(imagePath!),
+                  child: Image.asset(imagePath),
                 ),
                 // Text(containertitle!,
                 // style: ,
@@ -783,8 +784,8 @@ class CommonUI {
           ),
         ),
         desktop: Container(
-          height: 250,
-          width: 250,
+          height: 250.sp,
+          width: 250.sp,
           decoration: BoxDecoration(
             color: blueColor,
             borderRadius: BorderRadius.circular(10),
@@ -798,7 +799,7 @@ class CommonUI {
                 SizedBox(
                   height: 20.sp,
                   width: 20.sp,
-                  child: Image.asset(imagePath!),
+                  child: Image.asset(imagePath),
                 ),
                 // Text(containertitle!,
                 // style: ,
@@ -880,14 +881,14 @@ class CommonUI {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  text!,
+                  text,
                   style: GoogleFonts.istokWeb(
                       fontSize: 30.sp,
                       fontWeight: FontWeight.w700,
                       color: darkwhiteColor),
                 ),
                 Text(
-                  descriptiontext!,
+                  descriptiontext,
                   style: GoogleFonts.istokWeb(
                     fontSize: 20.sp,
                     fontWeight: FontWeight.w400,
@@ -905,7 +906,7 @@ class CommonUI {
               child: Row(
                 children: [
                   Text(
-                    text!,
+                    text,
                     style: GoogleFonts.istokWeb(
                         fontSize: 40.sp,
                         fontWeight: FontWeight.w700,
@@ -913,7 +914,7 @@ class CommonUI {
                   ),
                   Spacer(),
                   Text(
-                    descriptiontext!,
+                    descriptiontext,
                     style: GoogleFonts.istokWeb(
                       fontSize: 25.sp,
                       fontWeight: FontWeight.w700,

@@ -18,7 +18,6 @@ class _BaseScreenState extends State<BaseScreen> {
   int index = 0;
   @override
   Widget build(BuildContext context) {
-    // print(MediaQuery.of(context).size.width);
     return Scaffold(
       appBar: AppBar(
         backgroundColor: blueColor,
