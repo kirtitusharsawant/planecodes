@@ -18,7 +18,7 @@ class CommonUI {
           text!,
           style: GoogleFonts.istokWeb(
             fontWeight: FontWeight.w700,
-            fontSize: 40.sp,
+            fontSize: 20.sp,
             color: darkwhiteColor,
           ),
         ),
@@ -125,14 +125,6 @@ class CommonUI {
             color: color,
           ),
         ));
-    // return Text(
-    //   titletext!,
-    //   style: GoogleFonts.istokWeb(
-    //     fontSize: 35.sp,
-    //     fontWeight: FontWeight.w400,
-    //     color: color,
-    //   ),
-    // );
   }
 
   static Widget commonDescriptionPageTwo(
@@ -345,36 +337,6 @@ class CommonUI {
         ),
       );
     }));
-    // return Obx(() {
-    //   return SizedBox(
-    //     height: 50.sp,
-    //     width: 180.sp,
-    //     child: ElevatedButton(
-    //       onHover: (value) {
-    //         value
-    //             ? commonController.setOnHoverToTrue()
-    //             : commonController.setOnHoverToFalse();
-    //       },
-    //       style: ElevatedButton.styleFrom(
-    //         primary:
-    //             commonController.onHover.value ? darkwhiteColor : blueColor,
-    //         shape: RoundedRectangleBorder(
-    //           side: const BorderSide(color: whiteColor, width: 3),
-    //           borderRadius: BorderRadius.circular(10),
-    //         ),
-    //       ),
-    //       onPressed: () {},
-    //       child: Text(
-    //         buttontext,
-    //         style: GoogleFonts.istokWeb(
-    //           fontWeight: FontWeight.w700,
-    //           fontSize: 20.sp,
-    //           color: commonController.onHover.value ? blueColor : whiteColor,
-    //         ),
-    //       ),
-    //     ),
-    //   );
-    // });
   }
 
   static Widget commonContainerTitle({String? containerTitle}) {
@@ -403,14 +365,6 @@ class CommonUI {
             color: whiteColor,
           ),
         ));
-    // return Text(
-    //   containerTitle!,
-    //   style: GoogleFonts.istokWeb(
-    //     fontWeight: FontWeight.w700,
-    //     fontSize: 20.sp,
-    //     color: whiteColor,
-    //   ),
-    // );
   }
 
   static Widget commonContainerDescription({String? containerdescription}) {
@@ -433,12 +387,6 @@ class CommonUI {
               fontSize: 15.sp,
               color: whiteColor,
             )));
-    // return Text(containerdescription!,
-    //     style: GoogleFonts.istokWeb(
-    //       fontWeight: FontWeight.w400,
-    //       fontSize: 15.sp,
-    //       color: whiteColor,
-    //     ));
   }
 
   static Widget commonAppBarAction(
@@ -574,49 +522,6 @@ class CommonUI {
         ),
       ),
     );
-    // return InkWell(
-    //   onTap: onTap,
-    //   child: Padding(
-    //     padding: const EdgeInsets.only(
-    //       top: 10,
-    //       right: 20,
-    //       left: 20,
-    //     ),
-    //     child: Column(
-    //       mainAxisAlignment: MainAxisAlignment.center,
-    //       children: [
-    //         Text(
-    //           text!,
-    //           style: GoogleFonts.istokWeb(
-    //             fontSize: 18.sp,
-    //             fontWeight: FontWeight.w500,
-    //             color: darkwhiteColor,
-    //           ),
-    //         ),
-    //         const SizedBox(
-    //           height: 5,
-    //         ),
-    //         isVisible
-    //             ? Container(
-    //                 height: 3,
-    //                 width: 50,
-    //                 decoration: BoxDecoration(
-    //                   borderRadius: BorderRadius.circular(2),
-    //                   color: whiteColor,
-    //                 ),
-    //               )
-    //             : Container(
-    //                 height: 3,
-    //                 width: 50,
-    //                 decoration: BoxDecoration(
-    //                   borderRadius: BorderRadius.circular(2),
-    //                   color: Colors.transparent,
-    //                 ),
-    //               ),
-    //       ],
-    //     ),
-    //   ),
-    // );
   }
 
   static Widget commonBottomBarDescription(
@@ -647,14 +552,6 @@ class CommonUI {
         ),
       ),
     );
-    // return Text(
-    //   descriptiontext!,
-    //   style: GoogleFonts.istokWeb(
-    //     fontWeight: FontWeight.w700,
-    //     fontSize: 32.sp,
-    //     color: color,
-    //   ),
-    // );
   }
 
   static Widget commonRoundedCircle() {
@@ -678,12 +575,6 @@ class CommonUI {
             const BoxDecoration(color: darkgreyColor, shape: BoxShape.circle),
       ),
     );
-    // return Container(
-    //   height: 100.sp,
-    //   width: 100.sp,
-    //   decoration:
-    //       const BoxDecoration(color: darkgreyColor, shape: BoxShape.circle),
-    // );
   }
 
   static Widget commonRectangle() {
@@ -711,13 +602,6 @@ class CommonUI {
             borderRadius: BorderRadius.circular(10),
           )),
     );
-    // return Container(
-    //     height: 250.sp,
-    //     width: 400.sp,
-    //     decoration: BoxDecoration(
-    //       color: darkgreyColor,
-    //       borderRadius: BorderRadius.circular(10),
-    //     ));
   }
 
   static Widget commonRectangleOne(
@@ -743,11 +627,7 @@ class CommonUI {
                   width: 20.sp,
                   child: Image.asset(imagePath!),
                 ),
-                // Text(containertitle!,
-                // style: ,
-                // ),
                 commonContainerTitle(containerTitle: containertitle),
-                // Text(containerdescription!)
                 commonContainerDescription(
                     containerdescription: containerdescription),
               ],
@@ -772,11 +652,7 @@ class CommonUI {
                   width: 20.sp,
                   child: Image.asset(imagePath),
                 ),
-                // Text(containertitle!,
-                // style: ,
-                // ),
                 commonContainerTitle(containerTitle: containertitle),
-                // Text(containerdescription!)
                 commonContainerDescription(
                     containerdescription: containerdescription),
               ],
@@ -801,128 +677,97 @@ class CommonUI {
                   width: 20.sp,
                   child: Image.asset(imagePath),
                 ),
-                // Text(containertitle!,
-                // style: ,
-                // ),
                 commonContainerTitle(containerTitle: containertitle),
-                // Text(containerdescription!)
                 commonContainerDescription(
                     containerdescription: containerdescription),
               ],
             ),
           ),
         ));
-    // return Container(
-    //   height: 250,
-    //   width: 250,
-    //   decoration: BoxDecoration(
-    //     color: blueColor,
-    //     borderRadius: BorderRadius.circular(10),
-    //   ),
-    //   child: Padding(
-    //     padding: const EdgeInsets.all(20),
-    //     child: Column(
-    //       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-    //       crossAxisAlignment: CrossAxisAlignment.start,
-    //       children: [
-    //         SizedBox(
-    //           height: 20.sp,
-    //           width: 20.sp,
-    //           child: Image.asset(imagePath!),
-    //         ),
-    //         // Text(containertitle!,
-    //         // style: ,
-    //         // ),
-    //         commonContainerTitle(containerTitle: containertitle),
-    //         // Text(containerdescription!)
-    //         commonContainerDescription(
-    //             containerdescription: containerdescription),
-    //       ],
-    //     ),
-    //   ),
-    // );
   }
 
   static Widget commonBottomBar(
       {String? text, Color? color, String? descriptiontext}) {
     return Responsive(
-        mobile: Container(
-            height: 70.sp,
-            width: double.infinity,
-            color: pinkColor,
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text(
-                  text!,
-                  style: GoogleFonts.istokWeb(
-                      fontSize: 22.sp,
-                      fontWeight: FontWeight.w700,
-                      color: darkwhiteColor),
-                ),
-                SizedBox(
-                  height: 2.sp,
-                ),
-                Text(
-                  descriptiontext!,
-                  style: GoogleFonts.istokWeb(
-                    fontSize: 14.sp,
-                    fontWeight: FontWeight.w400,
-                    color: darkwhiteColor,
-                  ),
-                )
-              ],
-            )),
-        tablet: Container(
-            height: 100.sp,
-            width: double.infinity,
-            color: pinkColor,
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text(
-                  text,
-                  style: GoogleFonts.istokWeb(
-                      fontSize: 30.sp,
-                      fontWeight: FontWeight.w700,
-                      color: darkwhiteColor),
-                ),
-                Text(
-                  descriptiontext,
-                  style: GoogleFonts.istokWeb(
-                    fontSize: 20.sp,
-                    fontWeight: FontWeight.w400,
-                    color: darkwhiteColor,
-                  ),
-                )
-              ],
-            )),
-        desktop: Container(
-            height: 80.sp,
-            width: double.infinity,
-            color: pinkColor,
-            child: Padding(
-              padding: const EdgeInsets.all(20.0),
-              child: Row(
-                children: [
-                  Text(
-                    text,
-                    style: GoogleFonts.istokWeb(
-                        fontSize: 40.sp,
-                        fontWeight: FontWeight.w700,
-                        color: darkwhiteColor),
-                  ),
-                  Spacer(),
-                  Text(
-                    descriptiontext,
-                    style: GoogleFonts.istokWeb(
-                      fontSize: 25.sp,
-                      fontWeight: FontWeight.w700,
-                      color: darkwhiteColor,
-                    ),
-                  )
-                ],
+      mobile: Container(
+          height: 70.sp,
+          width: double.infinity,
+          color: pinkColor,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                text!,
+                style: GoogleFonts.istokWeb(
+                    fontSize: 22.sp,
+                    fontWeight: FontWeight.w700,
+                    color: darkwhiteColor),
               ),
-            )));
+              SizedBox(
+                height: 2.sp,
+              ),
+              Text(
+                descriptiontext!,
+                style: GoogleFonts.istokWeb(
+                  fontSize: 14.sp,
+                  fontWeight: FontWeight.w400,
+                  color: darkwhiteColor,
+                ),
+              )
+            ],
+          )),
+      tablet: Container(
+          height: 100.sp,
+          width: double.infinity,
+          color: pinkColor,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                text,
+                style: GoogleFonts.istokWeb(
+                    fontSize: 30.sp,
+                    fontWeight: FontWeight.w700,
+                    color: darkwhiteColor),
+              ),
+              Text(
+                descriptiontext,
+                style: GoogleFonts.istokWeb(
+                  fontSize: 20.sp,
+                  fontWeight: FontWeight.w400,
+                  color: darkwhiteColor,
+                ),
+              )
+            ],
+          )),
+      desktop: Container(
+        height: 80.sp,
+        width: double.infinity,
+        color: pinkColor,
+        child: Padding(
+          padding: const EdgeInsets.all(20.0),
+          child: Row(
+            children: [
+              Text(
+                text,
+                style: GoogleFonts.istokWeb(
+                    fontSize: 40.sp,
+                    fontWeight: FontWeight.w700,
+                    color: darkwhiteColor),
+              ),
+              Spacer(),
+              Text(
+                descriptiontext,
+                style: GoogleFonts.istokWeb(
+                  fontSize: 25.sp,
+                  fontWeight: FontWeight.w700,
+                  color: darkwhiteColor,
+                ),
+              )
+            ],
+          ),
+        ),
+      ),
+    );
   }
 }

@@ -16,6 +16,11 @@ class BaseScreen extends StatefulWidget {
 
 class _BaseScreenState extends State<BaseScreen> {
   int index = 0;
+  var key1 = GlobalKey();
+  var key2 = GlobalKey();
+  var key3 = GlobalKey();
+  var key4 = GlobalKey();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -30,6 +35,7 @@ class _BaseScreenState extends State<BaseScreen> {
             onTap: () {
               setState(() {
                 index = 0;
+                Scrollable.ensureVisible(key1.currentContext!);
               });
             },
           ),
@@ -39,6 +45,7 @@ class _BaseScreenState extends State<BaseScreen> {
             onTap: () {
               setState(() {
                 index = 1;
+                Scrollable.ensureVisible(key2.currentContext!);
               });
             },
           ),
@@ -48,6 +55,7 @@ class _BaseScreenState extends State<BaseScreen> {
             onTap: () {
               setState(() {
                 index = 2;
+                Scrollable.ensureVisible(key3.currentContext!);
               });
             },
           ),
@@ -57,6 +65,7 @@ class _BaseScreenState extends State<BaseScreen> {
             onTap: () {
               setState(() {
                 index = 3;
+                Scrollable.ensureVisible(key4.currentContext!);
               });
             },
           ),
@@ -67,11 +76,19 @@ class _BaseScreenState extends State<BaseScreen> {
       ),
       body: SingleChildScrollView(
         child: Column(
-          children: const [
-            PageOneScreen(),
-            PageTwoScreen(),
-            PageThreeScreen(),
-            PageFourScreen(),
+          children: [
+            PageOneScreen(
+              key: key1,
+            ),
+            PageTwoScreen(
+              key: key2,
+            ),
+            PageThreeScreen(
+              key: key3,
+            ),
+            PageFourScreen(
+              key: key4,
+            ),
           ],
         ),
       ),
