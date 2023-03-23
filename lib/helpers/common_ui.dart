@@ -39,8 +39,8 @@ class CommonUI {
         child: Text(
           text,
           style: GoogleFonts.istokWeb(
-            fontWeight: FontWeight.w700,
-            fontSize: 40.sp,
+            fontWeight: FontWeight.w500,
+            fontSize: 30.sp,
             color: darkwhiteColor,
           ),
         ),
