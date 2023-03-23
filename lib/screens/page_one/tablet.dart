@@ -35,8 +35,6 @@ class PageOneTablet extends StatelessWidget {
                 child: Container(
                   margin: EdgeInsets.only(left: 50.sp),
                   child: SizedBox(
-                    // height: 440.sp,
-                    // width: 850.sp,
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [

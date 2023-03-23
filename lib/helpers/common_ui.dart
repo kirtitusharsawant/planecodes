@@ -5,10 +5,57 @@ import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:planecode/constants/colour_constants.dart';
 import 'package:planecode/constants/controller_constants.dart';
+import 'package:planecode/constants/text_constants.dart';
 import 'package:planecode/helpers/responsive.dart';
 
 class CommonUI {
   CommonUI._();
+
+  static PreferredSizeWidget commonWebAppBar(
+      BuildContext context, List<Widget> actionWidget) {
+    return PreferredSize(
+      preferredSize: Responsive.isDesktop(context)
+          ? Size.fromHeight(60.sp)
+          : Responsive.isTablet(context)
+              ? Size.fromHeight(110.sp)
+              : Size.fromHeight(100.sp),
+      child: Responsive(
+        mobile: AppBar(
+          centerTitle: true,
+          backgroundColor: blueColor,
+          elevation: 0,
+          title: CommonUI.commonappBarTitle(text: appBarTitle),
+          bottom: PreferredSize(
+            preferredSize: Size.fromHeight(100.sp),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: actionWidget,
+            ),
+          ),
+        ),
+        tablet: AppBar(
+          centerTitle: true,
+          backgroundColor: blueColor,
+          elevation: 0,
+          title: CommonUI.commonappBarTitle(text: appBarTitle),
+          bottom: PreferredSize(
+            preferredSize: Size.fromHeight(110.sp),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: actionWidget,
+            ),
+          ),
+        ),
+        desktop: AppBar(
+          backgroundColor: blueColor,
+          title: CommonUI.commonappBarTitle(text: appBarTitle),
+          elevation: 0,
+          actions: actionWidget,
+        ),
+      ),
+    );
+  }
 
   static Widget commonappBarTitle({String? text}) {
     return Responsive(
@@ -29,7 +76,7 @@ class CommonUI {
           text,
           style: GoogleFonts.istokWeb(
             fontWeight: FontWeight.w700,
-            fontSize: 40.sp,
+            fontSize: 30.sp,
             color: darkwhiteColor,
           ),
         ),
@@ -102,6 +149,7 @@ class CommonUI {
     return Responsive(
         mobile: Text(
           titletext!,
+          textAlign: TextAlign.center,
           style: GoogleFonts.istokWeb(
             fontSize: 30.sp,
             wordSpacing: 1.3,
@@ -397,8 +445,8 @@ class CommonUI {
         child: Padding(
           padding: const EdgeInsets.only(
             top: 10,
-            right: 20,
-            left: 20,
+            right: 10,
+            left: 10,
           ),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -406,7 +454,7 @@ class CommonUI {
               Text(
                 text!,
                 style: GoogleFonts.istokWeb(
-                  fontSize: 18.sp,
+                  fontSize: 10.sp,
                   fontWeight: FontWeight.w500,
                   color: darkwhiteColor,
                 ),
@@ -755,7 +803,7 @@ class CommonUI {
                     fontWeight: FontWeight.w700,
                     color: darkwhiteColor),
               ),
-              Spacer(),
+              const Spacer(),
               Text(
                 descriptiontext,
                 style: GoogleFonts.istokWeb(
