@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:planecode/constants/colour_constants.dart';
+import 'package:planecode/constants/image_constants.dart';
 import 'package:planecode/constants/text_constants.dart';
 import 'package:planecode/helpers/common_ui.dart';
 
@@ -34,10 +35,18 @@ class PageFourMobile extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                CommonUI.commonRoundedCircle(),
-                CommonUI.commonRoundedCircle(),
-                CommonUI.commonRoundedCircle(),
-                // CommonUI.commonRoundedCircle(),
+                CommonUI.commonRoundedCircle(imagePath: elixir),
+                CommonUI.commonRoundedCircle(imagePath: flutter),
+              ],
+            ),
+            SizedBox(
+              height: 30.sp,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                CommonUI.commonRoundedCircle(imagePath: node),
+                CommonUI.commonRoundedCircle(imagePath: python),
               ],
             ),
             const Spacer(),
@@ -49,6 +58,5 @@ class PageFourMobile extends StatelessWidget {
         ),
       ),
     );
-    ;
   }
 }

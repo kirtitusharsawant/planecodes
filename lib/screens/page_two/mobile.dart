@@ -21,12 +21,17 @@ class PageTwoMobile extends StatelessWidget {
           ),
           Positioned(
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Padding(
                   padding: EdgeInsets.only(
-                      left: 20.sp, right: 20.sp, top: 20.sp, bottom: 10.sp),
+                    left: 60.sp,
+                    right: 80.sp,
+                  ),
                   child: CommonUI.commonTitle(titletext: pageTwoTitle),
+                ),
+                SizedBox(
+                  height: 10.sp,
                 ),
                 CommonUI.commonDescriptionPageTwo(
                     descriptiontext: pageTwoDescription),

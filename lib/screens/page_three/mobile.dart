@@ -14,7 +14,7 @@ class PageThreeMobile extends StatelessWidget {
       child: Container(
         color: blueColor,
         child: SizedBox(
-          height: MediaQuery.of(context).size.height * 1.23,
+          height: MediaQuery.of(context).size.height * 2,
           child: Stack(
             children: [
               Positioned(
@@ -27,7 +27,7 @@ class PageThreeMobile extends StatelessWidget {
                   child: Column(
                 children: [
                   SizedBox(
-                    height: 10.sp,
+                    height: 19.sp,
                   ),
                   CommonUI.commonTitle(
                       titletext: pageThreeTitle, color: whiteColor),
@@ -46,6 +46,18 @@ class PageThreeMobile extends StatelessWidget {
                   Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
+                      CommonUI.commonRectangle(),
+                      SizedBox(
+                        height: 22.sp,
+                      ),
+                      CommonUI.commonRectangle(),
+                      SizedBox(
+                        height: 22.sp,
+                      ),
+                      CommonUI.commonRectangle(),
+                      SizedBox(
+                        height: 22.sp,
+                      ),
                       CommonUI.commonRectangle(),
                       SizedBox(
                         height: 22.sp,

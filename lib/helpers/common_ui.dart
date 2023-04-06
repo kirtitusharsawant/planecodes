@@ -437,139 +437,188 @@ class CommonUI {
             )));
   }
 
-  static Widget commonAppBarAction(
-      {String? text, bool isVisible = false, VoidCallback? onTap}) {
-    return Responsive(
-      mobile: InkWell(
-        onTap: onTap,
-        child: Padding(
-          padding: const EdgeInsets.only(
-            top: 10,
-            right: 10,
-            left: 10,
-          ),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text(
-                text!,
-                style: GoogleFonts.istokWeb(
-                  fontSize: 10.sp,
-                  fontWeight: FontWeight.w500,
-                  color: darkwhiteColor,
-                ),
-              ),
-              const SizedBox(
-                height: 5,
-              ),
-              isVisible
-                  ? Container(
-                      height: 3,
-                      width: 50,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(2),
-                        color: whiteColor,
-                      ),
-                    )
-                  : Container(
-                      height: 3,
-                      width: 50,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(2),
-                        color: Colors.transparent,
-                      ),
-                    ),
-            ],
-          ),
+  static Widget commonAppBarAction({
+    String? text,
+    bool isVisible = false,
+    VoidCallback? onTap,
+    double actionFontSize = 18.0,
+    double horizontalPadding = 20.0,
+  }) {
+    return InkWell(
+      onTap: onTap,
+      child: Padding(
+        padding: EdgeInsets.only(
+          top: 10,
+          right: horizontalPadding,
+          left: horizontalPadding,
         ),
-      ),
-      tablet: InkWell(
-        onTap: onTap,
-        child: Padding(
-          padding: const EdgeInsets.only(
-            top: 10,
-            right: 20,
-            left: 20,
-          ),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text(
-                text,
-                style: GoogleFonts.istokWeb(
-                  fontSize: 18.sp,
-                  fontWeight: FontWeight.w500,
-                  color: darkwhiteColor,
-                ),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+              text!,
+              style: GoogleFonts.istokWeb(
+                fontSize: actionFontSize.sp,
+                fontWeight: FontWeight.w500,
+                color: darkwhiteColor,
               ),
-              const SizedBox(
-                height: 5,
-              ),
-              isVisible
-                  ? Container(
-                      height: 3,
-                      width: 50,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(2),
-                        color: whiteColor,
-                      ),
-                    )
-                  : Container(
-                      height: 3,
-                      width: 50,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(2),
-                        color: Colors.transparent,
-                      ),
+            ),
+            const SizedBox(
+              height: 5,
+            ),
+            isVisible
+                ? Container(
+                    height: 3,
+                    width: 50,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(2),
+                      color: whiteColor,
                     ),
-            ],
-          ),
-        ),
-      ),
-      desktop: InkWell(
-        onTap: onTap,
-        child: Padding(
-          padding: const EdgeInsets.only(
-            top: 10,
-            right: 20,
-            left: 20,
-          ),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text(
-                text,
-                style: GoogleFonts.istokWeb(
-                  fontSize: 18.sp,
-                  fontWeight: FontWeight.w500,
-                  color: darkwhiteColor,
-                ),
-              ),
-              const SizedBox(
-                height: 5,
-              ),
-              isVisible
-                  ? Container(
-                      height: 3,
-                      width: 50,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(2),
-                        color: whiteColor,
-                      ),
-                    )
-                  : Container(
-                      height: 3,
-                      width: 50,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(2),
-                        color: Colors.transparent,
-                      ),
+                  )
+                : Container(
+                    height: 3,
+                    width: 50,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(2),
+                      color: Colors.transparent,
                     ),
-            ],
-          ),
+                  ),
+          ],
         ),
       ),
     );
+
+    // return Responsive(
+    //   mobile: InkWell(
+    //     onTap: onTap,
+    //     child: Padding(
+    //       padding: const EdgeInsets.only(
+    //         top: 10,
+    //         right: 10,
+    //         left: 10,
+    //       ),
+    //       child: Column(
+    //         mainAxisAlignment: MainAxisAlignment.center,
+    //         children: [
+    //           Text(
+    //             text!,
+    //             style: GoogleFonts.istokWeb(
+    //               fontSize: 5.sp,
+    //               fontWeight: FontWeight.w500,
+    //               color: darkwhiteColor,
+    //             ),
+    //           ),
+    //           const SizedBox(
+    //             height: 5,
+    //           ),
+    //           isVisible
+    //               ? Container(
+    //                   height: 3,
+    //                   width: 50,
+    //                   decoration: BoxDecoration(
+    //                     borderRadius: BorderRadius.circular(2),
+    //                     color: whiteColor,
+    //                   ),
+    //                 )
+    //               : Container(
+    //                   height: 3,
+    //                   width: 50,
+    //                   decoration: BoxDecoration(
+    //                     borderRadius: BorderRadius.circular(2),
+    //                     color: Colors.transparent,
+    //                   ),
+    //                 ),
+    //         ],
+    //       ),
+    //     ),
+    //   ),
+    //   tablet: InkWell(
+    //     onTap: onTap,
+    //     child: Padding(
+    //       padding: const EdgeInsets.only(
+    //         top: 10,
+    //         right: 20,
+    //         left: 20,
+    //       ),
+    //       child: Column(
+    //         mainAxisAlignment: MainAxisAlignment.center,
+    //         children: [
+    //           Text(
+    //             text,
+    //             style: GoogleFonts.istokWeb(
+    //               fontSize: 18.sp,
+    //               fontWeight: FontWeight.w500,
+    //               color: darkwhiteColor,
+    //             ),
+    //           ),
+    //           const SizedBox(
+    //             height: 5,
+    //           ),
+    //           isVisible
+    //               ? Container(
+    //                   height: 3,
+    //                   width: 50,
+    //                   decoration: BoxDecoration(
+    //                     borderRadius: BorderRadius.circular(2),
+    //                     color: whiteColor,
+    //                   ),
+    //                 )
+    //               : Container(
+    //                   height: 3,
+    //                   width: 50,
+    //                   decoration: BoxDecoration(
+    //                     borderRadius: BorderRadius.circular(2),
+    //                     color: Colors.transparent,
+    //                   ),
+    //                 ),
+    //         ],
+    //       ),
+    //     ),
+    //   ),
+    //   desktop: InkWell(
+    //     onTap: onTap,
+    //     child: Padding(
+    //       padding: const EdgeInsets.only(
+    //         top: 10,
+    //         right: 20,
+    //         left: 20,
+    //       ),
+    //       child: Column(
+    //         mainAxisAlignment: MainAxisAlignment.center,
+    //         children: [
+    //           Text(
+    //             text,
+    //             style: GoogleFonts.istokWeb(
+    //               fontSize: 18.sp,
+    //               fontWeight: FontWeight.w500,
+    //               color: darkwhiteColor,
+    //             ),
+    //           ),
+    //           const SizedBox(
+    //             height: 5,
+    //           ),
+    //           isVisible
+    //               ? Container(
+    //                   height: 3,
+    //                   width: 50,
+    //                   decoration: BoxDecoration(
+    //                     borderRadius: BorderRadius.circular(2),
+    //                     color: whiteColor,
+    //                   ),
+    //                 )
+    //               : Container(
+    //                   height: 3,
+    //                   width: 50,
+    //                   decoration: BoxDecoration(
+    //                     borderRadius: BorderRadius.circular(2),
+    //                     color: Colors.transparent,
+    //                   ),
+    //                 ),
+    //         ],
+    //       ),
+    //     ),
+    //   ),
+    // );
   }
 
   static Widget commonBottomBarDescription(
@@ -602,13 +651,15 @@ class CommonUI {
     );
   }
 
-  static Widget commonRoundedCircle() {
+  static Widget commonRoundedCircle({String? imagePath}) {
     return Responsive(
       mobile: Container(
         height: 5.sp,
         width: 5.sp,
-        decoration:
-            const BoxDecoration(color: darkgreyColor, shape: BoxShape.circle),
+        decoration: const BoxDecoration(
+          color: darkgreyColor,
+          shape: BoxShape.circle,
+        ),
       ),
       tablet: Container(
         height: 100.sp,
@@ -619,8 +670,17 @@ class CommonUI {
       desktop: Container(
         height: 100.sp,
         width: 100.sp,
-        decoration:
-            const BoxDecoration(color: darkgreyColor, shape: BoxShape.circle),
+        decoration: const BoxDecoration(
+          color: darkgreyColor,
+          shape: BoxShape.circle,
+        ),
+        child: Padding(
+          padding: const EdgeInsets.all(20.0),
+          child: Image.asset(
+            imagePath!,
+            fit: BoxFit.cover,
+          ),
+        ),
       ),
     );
   }
@@ -628,12 +688,13 @@ class CommonUI {
   static Widget commonRectangle() {
     return Responsive(
       mobile: Container(
-          height: 200.sp,
-          width: 250.sp,
-          decoration: BoxDecoration(
-            color: darkgreyColor,
-            borderRadius: BorderRadius.circular(10),
-          )),
+        height: 200.sp,
+        width: 250.sp,
+        decoration: BoxDecoration(
+          color: darkgreyColor,
+          borderRadius: BorderRadius.circular(10),
+        ),
+      ),
       tablet: Container(
         height: 250.sp,
         width: 400.sp,
